@@ -1,73 +1,57 @@
-# Welcome to your Lovable project
+# Varnit Kumar's Portfolio
 
-## Project info
+Welcome to the personal portfolio project of **Varnit Kumar**.
 
-**URL**: https://lovable.dev/projects/94014461-8803-4795-a37c-0cfa000f7428
+## Project Overview
 
-## How can I edit this code?
+This portfolio showcases my work, skills, and projects as a developer. It is built using modern web technologies for fast performance and a great developer experience.
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **Vite** – Fast build tool and development server
+- **TypeScript** – Type-safe JavaScript
+- **React** – UI library for building interactive interfaces
+- **shadcn-ui** – Accessible React components
+- **Tailwind CSS** – Utility-first CSS framework
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/94014461-8803-4795-a37c-0cfa000f7428) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To run this project locally, follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 1. Clone the repository
+git clone https://github.com/vannu07/varnit-data-folio.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Navigate to the project directory
+cd varnit-data-folio
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+You can deploy this project using platforms like Vercel, Netlify, or your preferred hosting provider.  
+For example, to deploy on Vercel:
 
-**Use GitHub Codespaces**
+1. Push your code to GitHub.
+2. Import your repository into [Vercel](https://vercel.com/).
+3. Follow the setup instructions.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Custom Domain
 
-## What technologies are used for this project?
+To use a custom domain, configure your DNS settings with your hosting provider and link your domain to your deployed site.
 
-This project is built with:
+## Contact
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Feel free to reach out for collaboration or feedback:
 
-## How can I deploy this project?
+- **Email:** varnit.kumar@email.com
+- **GitHub:** [vannu07](https://github.com/vannu07)
 
-Simply open [Lovable](https://lovable.dev/projects/94014461-8803-4795-a37c-0cfa000f7428) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Thank you for visiting
