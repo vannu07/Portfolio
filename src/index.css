@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Professional Data Portfolio Design System - Dark Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark Professional Theme */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 223 47% 7%;
+    --card-foreground: 210 40% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 223 47% 7%;
+    --popover-foreground: 210 40% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Data Blue */
+    --primary: 216 100% 60%;
+    --primary-foreground: 222 47% 5%;
+    --primary-muted: 216 100% 50%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Tech Teal */
+    --secondary: 189 85% 45%;
+    --secondary-foreground: 222 47% 5%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - ML Purple */
+    --accent: 262 85% 65%;
+    --accent-foreground: 222 47% 5%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 223 47% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 85% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 223 47% 15%;
+    --input: 223 47% 15%;
+    --ring: 216 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 100% 60%), hsl(262 85% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(189 85% 45%), hsl(216 100% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 5%) 0%, hsl(223 47% 8%) 50%, hsl(224 47% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(223 47% 7%), hsl(223 47% 10%));
+
+    /* Shadows with Primary Color */
+    --shadow-primary: 0 10px 30px -5px hsl(216 100% 60% / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(223 47% 3% / 0.8);
+    --shadow-glow: 0 0 40px hsl(216 100% 60% / 0.2);
+
+    /* Professional Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +118,55 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  /* Professional Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground 
+           hover:shadow-primary transition-all duration-300 
+           hover:scale-105 font-semibold px-8 py-3 rounded-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground 
+           hover:bg-secondary/80 transition-colors duration-200;
+  }
+
+  /* Professional Cards */
+  .card-gradient {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-hover {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-primary/20;
+  }
+
+  /* Professional Animations */
+  .fade-in-up {
+    @apply animate-[fadeInUp_0.6s_ease-out_forwards];
+  }
+
+  .glow-effect {
+    @apply relative before:absolute before:inset-0 before:rounded-lg 
+           before:bg-gradient-to-r before:from-primary/20 before:to-accent/20 
+           before:blur-xl before:-z-10 before:opacity-0 
+           hover:before:opacity-100 before:transition-opacity before:duration-500;
+  }
+}
+
+@layer keyframes {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
